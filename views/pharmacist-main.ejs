@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		 <title>Bootstrap Example</title>
+		 <meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		 <link rel="shortcut icon" href="../favicon.ico">
+		 <link rel="stylesheet" type="text/css" href="css/main.css" />
+		 <link rel="stylesheet" type="text/css" href="css/pharmacist-main.css">
+   </head>
+   <body>
+	  	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+			   	<a class="navbar-brand" href="/">
+				  		<span id='color-one'>med</span><span id='color-two'>chain</span>
+			   	</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">Patient</a></li>
+					<li><a href="#">Doctor</a></li>
+					<li class='active'><a href="#">Pharmacist</a></li>
+				</ul>
+		 	</div>
+	  	</nav>
+
+   <div class="container invoice">
+	  	<div class="invoice-header">
+			<div class="row">
+				<div class="col-xs-8">
+				   <h1>Invoice <!-- <small>With Credit</small> --></h1>
+				   <h4 class="text-muted">NO: 387290/R1 | Date: <%=date%></h4>
+				</div>
+				<div class="col-xs-4">
+					<div class="media">
+				   	<div class="media-left">
+					  		<img class="media-object logo" src="https://dummyimage.com/70x70/000/fff&text=Acruz" />
+				   	</div>
+				   	<ul class="media-body list-unstyled">
+							<li><strong>Acruz Pharmacy</strong></li>
+							<li>Pharmaceutical</li>
+							<li>300 Front St. West, Toronto</li>
+							<li>Acruz.com</li>
+					   </ul>
+					</div>
+		 		</div>
+	  		</div>
+   	</div><!--container invoice-->
+
+	   <div class="invoice-body">
+		  	<div class="row">
+				<div class="col-xs-5">
+					<div class="panel panel-default">
+					   <div class="panel-heading">
+						  <h3 class="panel-title">Company Details</h3>
+					   </div>
+					   <div class="panel-body">
+						  	<dl class="dl-horizontal">
+								<dt>Name</dt>
+								<dd><strong>Acruz Pharmacy</strong></dd>
+							<dt>Address</dt>
+								<dd>300 Front St. West, Toronto</dd>
+								<dt>Phone</dt>
+								<dd>(647) 142-9811</dd>
+								<dt>Email</dt>
+								<dd>contact@acruz.com</dd>
+								<dt>&nbsp;</dt>
+						   	<dd>&nbsp;</dd>
+							</dl>
+					   </div>
+					</div>
+				</div>
+				<div class="col-xs-7">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						   <h3 class="panel-title">Customer Details</h3>
+						</div>
+						<div class="panel-body">
+						   <dl class="dl-horizontal">
+						   <dt>Name</dt>
+						   <dd><%=patient.name%></dd>
+						   <dt>Age</dt>
+						   <dd><%=patient.age%></dd>
+						   <dt>Address</dt>
+						   <dd><%=patient.address ? patient.address : '288 Spadina Road'%>, Toronto</dd>
+						   <dt>Phone</dt>
+						   <dd><%=patient.phoneno ? patient.phoneno : '(416) 338-1882'%></dd>
+						   <dt>Email</dt>
+						   <dd>contact@medchain.com</dd>
+						   <dt>&nbsp;</dt>
+						   <dd>&nbsp;</dd>
+						</div>
+					</div>
+			  	</div>
+			</div>
+		
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Services / Products</h3>
+			  	</div>
+			  	<table class="table table-bordered table-condensed">
+					<thead>
+				  		<tr>
+							<th>Item / Details</th>
+							<!-- <th class="text-center colfix">Unit Cost</th>
+							<th class="text-center colfix">Sum Cost</th> -->
+							<th class='text-center colfix'>Duplicate</th>
+							<th class="text-center colfix">Cost</th>
+							<th class="text-center colfix">Tax</th>
+							<th class="text-center colfix">Total</th>
+				  		</tr>
+					</thead>
+					<tbody>
+				  		<tr>
+							<td>
+						  		<b><%= drug1 %></b><br/>
+						  		<b><%= drug2 %></b>
+						  		<!-- <small class="text-muted">The best lorem in town, try it now or leave forever</small> -->
+							</td>
+							<!-- <td class="text-right">
+						  		<span class="mono">$10.00</span><br/>
+						  		<small class="text-muted">Before Tax</small>
+							</td> -->
+							<td class="text-right">
+						  		<span class="mono">
+						  			<% if (duplicateArray.length > 0) { -%>
+						  				<% for (var i = 0; i < duplicateArray.length; i++) { -%>
+						  					<ol>
+						  						<ul><%=duplicateArray[i]%></li>
+						  					</ol>
+						  				<% } -%>
+						  				<form method='post' action='/process'>
+						  					<button id='sendToProcess' class='radical-button' type='submit'>Fix<i class='glyphicon glyphicon-wrench'></i></button>
+						  				</form>
+						  			<% } else { -%>
+						  				None Found!
+						  			<% } -%>
+						  		</span>
+							</td>
+							<td class="text-right">
+						  		<span class="mono">$20.00</span><br/>
+						  		<small class="text-muted">Before Tax</small>
+							</td>
+							<td class="text-right">
+						  		<span class="mono">$2.60</span><br/>
+						  		<small class="text-muted">HST 13%</small>
+							</td>
+							<td class="text-right">
+						  		<strong class="mono">$22.60</strong><br/>
+						  		<small class="text-muted mono">$20.00</small>
+							</td>
+				  		</tr>
+					</tbody>
+			  	</table>
+			</div>
+
+			<!-- <div class="panel panel-default">
+			  	<table class="table table-bordered table-condensed">
+					<thead>
+				  		<tr>
+							<td class="text-center col-xs-1">Sub Total</td>
+							<td class="text-center col-xs-1">Discount</td>
+							<td class="text-center col-xs-1">Total</td>
+							<td class="text-center col-xs-1">Tax</td>
+							<td class="text-center col-xs-1">Final</td>
+				  		</tr>
+					</thead>
+					<tbody>
+					 	<tr>
+							<th class="text-center rowtotal mono">$182.40</th>
+							<th class="text-center rowtotal mono">-$18.00</th>
+							<th class="text-center rowtotal mono">$164.40</th>
+							<th class="text-center rowtotal mono">$33.12</th>
+							<th class="text-center rowtotal mono">$197.52</th>
+					  	</tr>
+					</tbody>
+				</table>
+			</div> -->
+
+			<div class="row">
+				<div class="col-xs-7">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">Comments / Notes</h4>
+				  		</div>
+				 		<div class="panel-body">
+							<hr style="margin:3px 0 5px" />
+							<%= patient.comments[patient.comments.length-2] %><br/>
+							<%= patient.comments[patient.comments.length-1] %>
+				  		</div>
+					</div>
+			  	</div>
+
+			  	<div class="col-xs-5">
+					<div class="panel panel-default">
+				  		<div class="panel-heading">
+							<h3 class="panel-title">Payment Method</h3>
+				  		</div>
+					  	<div class="panel-body">
+							<p>For your convenience, you may deposit the final amount at one of our banks</p>
+							<ul class="list-unstyled">
+								<li>TD - <span class="mono">1027 1839722</span></li>
+								<li>Tangerine - <span class="mono">0923 1908723</span></li>
+								<li>RBC - <span class="mono">2098 7621089</span></li>
+							</ul>
+					  	</div>
+					</div>
+				</div>
+			</div>
+	  	</div><!--invoice-body-->
+	 	<div class="invoice-footer">
+			Thank you for choosing our services.
+			<br/> We hope to see you again soon.
+			<br/>
+			<form method='POST' action='/patient-info'>
+				<input class='hidden' name='name' value='sukhpal'/>
+				<button type='submit'><h4>med</h4><h4 class='logo-color-change'>chain</h4></button>
+			</form>
+	  	</div>
+	</div>
+	  <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="js/pharmacist-main.js"></script>
+	  <script type="text/javascript " src="js/main.js "></script>
+   </body>
+</html>

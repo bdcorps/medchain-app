@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	 <title>Bootstrap Example</title>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" type="text/css" href="css/main.css">
+	 <link rel="stylesheet" type="text/css" href="css/doctor-main.css">
+</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<span id='color-one'>med</span><span id='color-two'>chain</span>
+					</a>
+					</div>
+					<ul class="nav navbar-nav">
+						 <li><a href="#">Patient</a></li>
+						 <li class='active'><a href="#">Doctor</a></li>
+						 <li><a href="#">Pharmacist</a></li>
+					</ul>
+			  </div>
+		 </nav>
+
+		 <!-- Main Content -->
+		 <div class='container-fluid'>
+			  <div class="row">
+					<div class='col-md-8 col-sm-8' id='section1'>
+						<div class="row" id='section1-header'><img src='../images/mclight-logo.png' width='100px' alt='logo' class='img-responsive' />
+							<h1>med<h1 class='logo-color-change'>chain</h1></h1>
+						</div>
+						<div id='section1-content'>
+							<h2>Data Privacy with scope using IBM Blockchain</h2>
+                  	<h4 class='margin-top-medium'> 
+                    	Data privacy is critical when it comes to sharing medical information publicly. IBM Blockchain makes it possible to set up scopes that give different levels of access to each of the participants on the network. For example, a doctor can see Medical Information of only his patients and not all the patients that are registered on the network. The doctor gets the READ access to the patient data only when the patient chooses to see the doctor. The accesses are managed by the Blockchain network using smart contracts.
+							</h4>
+							<h4 class='margin-top-medium' style='color: #F33259'>View the realtime Blockchain Transactions</h4>
+						</div>
+					</div>
+					<div class='col-md-4 col-sm-4' id='section2'>
+						<h2>Blockchain Transactions</h2>
+						<div id="results"></div>
+						<form action="/doctor-info" method="post">
+							<input id='login-button' type="submit" value="Continue">
+						</form>
+					</div><!-- section2 -->
+			  </div><!-- row -->
+		 </div><!--container-fluid-->
+		 
+		 <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 <script type="text/javascript" src="lib/renderjson.js"></script>
+		 <script type="text/javascript " src="js/doctor-main.js "></script>
+		 <script type="text/javascript " src="js/main.js "></script>
+	</body>
+
+</html>

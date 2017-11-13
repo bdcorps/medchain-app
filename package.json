@@ -1,0 +1,21 @@
+{
+  "name": "Medchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Minho Lee & Sukhpal Saini",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cfenv": "1.0.x",
+    "cron": "^1.2.1",
+    "ejs": "^2.5.6",
+    "errorhandler": "^1.2.4",
+    "express": "^4.15.3",
+    "mongoose": "^4.12.4"
+  }
+}

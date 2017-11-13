@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title>Bootstrap Example</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+							
+							Medchain
+							<!--Image to be inserted later (need photoshop) <img src='/images/medchain_text.png'/> -->
+					</a>
+				</div>
+				<ul class="nav navbar-nav initialSlideIn">
+						<li><a href="/patient">Patient</a></li>
+						<li><a href="/doctor">Doctor</a></li>
+						<li><a href="/pharmacist">Pharmacist</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<!-- <h1 class='text-center'> PATIENT PAGE </h1> -->
+		<div class='container-fluid'>
+			<div class="row">
+				<div class='col-md-8 col-sm-8' id='section1'>
+					<div class="row">
+						<h3>Insert Medchain Logo Here</h3>
+					</div>
+					<div class='row'>
+						<div id='section1-content'>
+							<h2>Welcome</h2>
+							<h4 class='margin-top-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class='col-md-4 col-sm-4' id='section2'>
+					<div class='row'>
+						<div class='pull-right'>
+							<h4>Login</h4>
+						</div>
+					</div>
+					<div class='row text-center'>
+						<div id='login-title'>
+							<h2>Medchain</h2>
+						</div>
+					</div>
+					<form action='patient-info' method='post'>
+						<div class='row'>
+							<div id='login-main'>
+								<i class='fa fa-user-circle fa-lg' aria-hidden="true"></i>
+								<input type='text' placeholder='Name' id='username'/>
+							</div>
+						</div>
+						<div class='row text-center margin-top-medium'>
+							<button id='login-button' type='submit'><i class='glyphicon glyphicon-log-in'></i></button>
+						</div>
+					</form>
+				</div><!-- section2 -->
+			</div><!-- row -->
+		</div> <!--container-fluid-->
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>     
+		<script type="text/javascript " src="js/main.js "></script>
+	</body>
+</html>

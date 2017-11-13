@@ -1,0 +1,147 @@
+body {
+	font-family: Roboto, sans-serif;
+	margin-top: 50px;
+}
+.radical-button {
+	background-color: #F33259;
+	border: solid red 0.2px;
+	border-radius: 2em;
+	height: 3em;
+}
+.radical-button:focus {
+	outline: none;
+}
+.invoice {
+  width: 970px !important;
+  margin: 50px auto;
+  margin-top: 0;
+}
+.invoice .invoice-header {
+  padding: 25px 25px 15px;
+}
+.invoice .invoice-header h1 {
+  margin: 0;
+}
+.invoice .invoice-header .media .media-body {
+  font-size: .9em;
+  margin: 0;
+}
+.invoice .invoice-body {
+  border-radius: 10px;
+  padding: 25px;
+  background: #FFF;
+}
+.invoice .invoice-footer {
+  padding: 15px;
+  font-size: 0.9em;
+  text-align: center;
+  color: #999;
+}
+.invoice .invoice-footer button {
+	color: #337ab7;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+.invoice .invoice-footer button h4{
+	display: inline-block;
+	transition: 1.0s all;
+}
+.invoice .invoice-footer button h4:hover {
+
+}
+.logo-color-change {
+	color: #F33259;
+	margin-left: 0;
+}
+.panel-default .panel-heading {
+	background-color: #F33259;
+	color: #fff;
+}
+.logo {
+  max-height: 70px;
+  border-radius: 10px;
+}
+.dl-horizontal {
+  margin: 0;
+}
+.dl-horizontal dt {
+  float: left;
+  width: 80px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal dd {
+  margin-left: 90px;
+}
+
+.rowamount {
+  padding-top: 15px !important;
+}
+
+.rowtotal {
+  font-size: 1.3em;
+}
+
+.colfix {
+  /*width: 12%;*/
+  width: 15%;
+}
+
+.mono {
+  font-family: monospace;
+}
+#sendToProcess {
+	height: 2em;
+	width: 70%;
+	color: #fff;
+	transition: width 0.5s linear;
+}
+#sendToProcess:hover {
+	width: 80%;
+}
+#sendToProcess i{
+	transition: all 0.5s linear;
+	margin-left: 1em;
+}
+#sendToProcess:hover i{
+	margin-left: 2.5em;
+	-webkit-animation: crank-wrench 1.0s infinite linear;
+					animation: crank-wrench 1.0s infinite linear;
+}
+@-webkit-keyframes crank-wrench {
+	25% {
+		-webkit-transform: rotateZ(-45deg);
+						transform: rotateZ(-45deg);
+	} 50% {
+		-webkit-transform: rotateZ(0deg);
+						transform: rotateZ(0deg);
+	} 75% {
+		-webkit-transform: rotateZ(45deg);
+						transform: rotateZ(45deg);
+	} 100% {
+		-webkit-transform: rotateZ(0deg);
+						transform: rotateZ(0deg);
+	}
+}
+@keyframes crank-wrench {
+	25% {
+		-webkit-transform: rotateZ(-45deg);
+						transform: rotateZ(-45deg);
+	} 50% {
+		-webkit-transform: rotateZ(0deg);
+						transform: rotateZ(0deg);
+	} 75% {
+		-webkit-transform: rotateZ(45deg);
+						transform: rotateZ(45deg);
+	} 100% {
+		-webkit-transform: rotateZ(0deg);
+						transform: rotateZ(0deg);
+	}
+}
+
+
+

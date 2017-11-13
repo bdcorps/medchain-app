@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	 <title>Bootstrap Example</title>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body id='patient-info-ejs'>
+	 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						medchain	
+					</a>
+				</div>
+				<ul class="nav navbar-nav initialSlideIn">
+					 <li><a href="#">Patient</a></li>
+					 <li class='active'><a href="#">Doctor</a></li>
+					 <li ><a href="#">Pharmacist</a></li>
+				</ul>
+		  </div>
+	 </nav>
+	 <!--container-fluid-->
+	 <form action="/process" method="POST">
+		  <h2>Awaiting Test Results... </h2>
+		  <h2>Dr. <%=doc.name%> prescribes <input type="" name="drug1" value="lm"> and <input type="" name="drug2" value="kj"> for patient <%=patient.name%></h2>
+		  <input type="submit" value="Submit To Pharmacist">
+	 </form>
+	 <div class='filler'></div>
+	 <script>
+	 	var doc = <%- JSON.stringify(doc) %>;
+	 </script>
+	 <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script type="text/javascript " src="js/doctor-info.js "></script>
+	 <script type="text/javascript " src="js/main.js "></script>
+</body>
+
+</html>

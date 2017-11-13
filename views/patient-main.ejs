@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+					<span id='color-one'>med</span><span id='color-two'>chain</span>
+				</a>
+			</div>
+			<ul class="nav navbar-nav initialSlideIn">
+				<li class='active'><a href="#">Patient</a></li>
+				<li><a href="#">Doctor</a></li>
+				<li><a href="#">Pharmacist</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Main Content -->
+	<!-- <h1 class='text-center'> PATIENT PAGE </h1> -->
+	<div class='container-fluid'>
+		<div class="row">
+			<div class='col-md-8 col-sm-8' id='section1'>
+				<div class="row" id='section1-header'>
+					<img src='../images/mclight-logo.png' width='100px' alt='logo' class='img-responsive'/>
+					<h1>med<h1 class='logo-color-change'>chain</h1></h1>
+				</div>
+				<div class='row'>
+					<div id='section1-content'>
+						<h2>Welcome</h2>
+						<h4 class='margin-top-medium'>This app aims to make the medical treatment process easier among multiple stakeholders, including the patients, the doctors, and the pharmacies. By implementing IBM's Blockchain service, the patient's medical records are kept secure on a distributed network. The patient's medical history can be updated in real time using smart contracts. The data on the network is managed on a privilege basis; ie only the assigned doctor will be able to see a corresponding patient's medical history.</h4>
+					</div>
+					<h4 class='margin-top-large' style='color: #F33259'>Enter your name to begin</h4>
+				</div>
+				<div class='row footer'>
+					<h4>Made by <a href='https://github.com/bdcorps' target="_blank"><span>Sukh</span><span class='color-change'>pal</span></a> and <a href='https://github.com/Minho-Lee' target="_blank"><span>Min</span><span class='color-change'>ho</span></a></h4>
+				</div>
+			</div>
+			<div class='col-md-4 col-sm-4' id='section2'>
+				<div class='row'>
+					<div id='login-title'>
+						<h2>Login</h2>
+					</div>
+				</div>
+				<form action='patient-info' method='post'>
+					<div class='row'>
+						<div id='login-main'>
+							<i class='fa fa-user-circle fa-lg' aria-hidden="true"></i>
+							<input name='name' type='text' placeholder='Name' id='username' />
+						</div>
+					</div>
+					<div class='row text-center margin-top-medium'>
+						<button id='login-button' type='submit'><i class='glyphicon glyphicon-log-in'></i></button>
+					</div>
+				</form>
+			</div>
+			<!-- section2 -->
+		</div>
+		<!-- row -->
+	</div>
+	<!--container-fluid-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript " src="js/patient-main.js "></script>
+	<script type="text/javascript " src="js/main.js "></script>
+</body>
+
+</html>

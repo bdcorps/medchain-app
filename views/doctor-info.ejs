@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	 <title>Bootstrap Example</title>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <!-- For now I am using Bootstrap 3 cdn link. Feel free to use Bootstrap 4 by replacing the link below -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="css/main.css">
+	 <link rel="stylesheet" type="text/css" href="css/doctor-info.css">
+</head>
+
+<body id='patient-info-ejs'>
+	 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container-fluid">
+				<div class="navbar-header">
+					 <a class="navbar-brand" href="#">
+						<span id='color-one'>med</span><span id='color-two'>chain</span>
+					</a>
+				</div>
+				<ul class="nav navbar-nav">
+					 <li><a href="#">Patient</a></li>
+					 <li class='active'><a href="#">Doctor</a></li>
+					 <li><a href="#">Pharmacist</a></li>
+				</ul>
+		  </div>
+	 </nav>
+	 <!-- Main Content -->
+	 <div class='container-fluid'>
+		  <div class="row">
+				<div class='col-md-4 col-sm-4' id='section1'>
+					 <div class="row" id='section1-header'>
+						  <img src='../images/mclight-logo.png' width='100px' alt='logo' class='img-responsive' />
+						  <h1>med<h1 class='logo-color-change'>chain</h1></h1>
+					 </div>
+					 <div class='row'>
+						  <div class='margin-top-medium'>
+								<img src='../images/square-sample-face.jpg' width='120px' class='img-responsive' />
+						  </div>
+						  <div id='section1-content'>
+								<h1><%=patient.name%>, <%=patient.age%></h1>
+								<h4 class='margin-top-medium'><%=patient.address ? patient.address : '288 Spadina Road'%></h4>
+								<h4 class='margin-top-small'>Toronto, ON</h4>
+								<h4 class='margin-top-small'><%=patient.phoneno ? patient.phoneno : '(416) 338-1882'%></h4>
+						  </div>
+					 </div>
+				</div>
+				<div class='col-md-8 col-sm-8' id='section2'>
+					<form id='prescription' method="POST" action="/pharmacist-main">
+						<h2>Prescription</h2>
+						<select name='drug1' id='drug1' required>
+							<option value='' disabled selected hidden>Please Choose...</option>
+							<option value='Ribavirin'>Ribavirin</option>
+							<option value='Levothyroxine'>Levothyroxine</option>
+							<option value='ACE Inhibitor'>ACE Inhibitor</option>
+						</select>
+						<select name='drug2' id='drug2' required>
+							<option value='' disabled selected hidden>Please Choose...</option>
+							<option value='Anti-Depressant'>Anti-Depressant</option>
+							<option value='Insulin'>Insulin</option>
+						</select>
+						<h2 class='margin-top-medium'>Doctor's comments</h2>
+						<textarea name='comments' rows="5" cols="60" placeholder="Comments"></textarea>
+						<div id='pharmacy-button-div' class='margin-top-medium'>
+							<input id='sendToPharmacy' class='radical-button' type="submit" value="Submit To Pharmacist">
+						</div>
+					</form>
+				</div><!-- section2 -->
+		  </div><!--container-fluid-->
+		<script>
+			
+		</script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript " src="js/doctor-info.js "></script>
+		<script type="text/javascript " src="js/main.js "></script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+	padding-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+}
+
+#section1 {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #f6f3f3;
+	padding-left: 4em;
+	padding-right: 4em;
+}
+
+#section1-content {
+	margin-top: 10em;
+	line-height: 24px;
+}
+
+#section2 {
+	color: #fff;
+	padding: 3em;
+	position: relative;
+}
+
+#section2:before {
+	background: #D9154F;
+}
+
+#results {
+	word-wrap: break-word;
+	padding-bottom: 2em;
+	overflow: scroll;
+	max-height: 50vh;
+}
+
+
+#login-button {
+	position: absolute;
+	left: 15%;
+	bottom: 10%;
+
+}
+
+.renderjson a {
+	text-decoration: none;
+}
+
+.renderjson .disclosure {
+	color: crimson;
+	font-size: 150%;
+}
+
+.renderjson .syntax {
+	color: grey;
+}
+
+.renderjson .string {
+	color: red;
+}
+
+.renderjson .number {
+	color: cyan;
+}
+
+.renderjson .boolean {
+	color: plum;
+}
+
+.renderjson .key {
+	color: lightblue;
+}
+
+.renderjson .keyword {
+	color: lightgoldenrodyellow;
+}
+
+.renderjson .object.syntax {
+	color: lightseagreen;
+}
+
+.renderjson .array.syntax {
+	color: lightsalmon;
+}
