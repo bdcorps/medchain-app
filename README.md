@@ -9,4 +9,4 @@ npm install --save
 npm start
 ``````````````
 
-![Screen1](/relative/path/to/img.jpg?raw=true "Screen 1")
+![Screen1](screen1.PNG?raw=true "Screen 1")
