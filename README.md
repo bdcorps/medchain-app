@@ -1,11 +1,12 @@
 # Medchain
+October 2017.
 
-## Blockchain enabled app
-
-### When more than one doctor assigns same drugs/medication to the same patient, or medications that have conflicting effects, the pharmacists will be able to see it immediately, and with a simple click of a button, it can notify everyone on the chain and simply make changes that can be applied almost immediately to remedy the problem.
+This app aims to make the medical treatment process easier among multiple stakeholders, including the patients, the doctors, and the pharmacies. By implementing IBM's Blockchain service, the patient's medical records are kept secure on a distributed network. The patient's medical history can be updated in real time using smart contracts. The data on the network is managed on a privilege basis; ie only the assigned doctor will be able to see a corresponding patient's medical history.
 
 ``````````````
-git clone https://github.com/Minho-Lee/medchain.git
+git clone https://github.com/bdcorps/medchain-app.git
 npm install --save
 npm start
 ``````````````
+
+![Screen1](/relative/path/to/img.jpg?raw=true "Screen 1")
