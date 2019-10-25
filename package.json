@@ -16,6 +16,6 @@
     "ejs": "^2.5.6",
     "errorhandler": "^1.2.4",
     "express": "^4.15.3",
-    "mongoose": "^4.12.4"
+    "mongoose": "^5.7.7"
   }
 }
